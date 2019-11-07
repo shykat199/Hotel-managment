@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    display: block;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+.back{
+  background:url(bg.jpg);
+  height: 100%;
+  width: 100%;
+}
+.mySlides1 {
+  display: none;
+}
+img {
+ width:600px;
+ height:400px;
+}
+.slideshow-container {
+  width: 1450px;
+  position: relative;
+  height:100%;
+  width: 100%; 
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+.add{
+  font-size: 30px;
+  color: white;
+  -ms-transform: translate(50px,100px);
+  -webkit-transform: translate(50px,100px);
+  transform: translate(600px,-658px);
+  height: 100%;
+  width: 428px;
+}
+#p{
+  font-size: 20px;
+  color:#F0F8FF;
+}
+#map{
+  transform: translate(10px,12px);
+}
+#p1 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.tw , .q{
+  height: 50px;
+  width: 86px;
+}
+.tt , img{
+width: 450px;
+} 
+ button {
+	background-color: green;
+	font-size: 40px;
+	font:yellow;
+	height: 50px;
+	width: 450px;
+}
+button:hover{
+	background-color: white;
+}
+</style>
+</head>
+<body>
+  <div class="back">
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="12.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="9.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+<div>
+  <p id="p"><b>LOCATION</b></p>
+  <p id="p1">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15282234.890686214!2d73.72331566436623!3d20.750211338090292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1572115754265!5m2!1sen!2sin" width="600px" height="613px" frameborder="0" style="border:1;" allowfullscreen=""></iframe>
+  </p>
+</div>
+<div class="add">
+  <ul>
+  <li>Address:Bangalor,india</li>
+  <li>Contact:+916668852558</li>
+  <li>Email:taj@gmail.com</li>
+  <div class="tw">
+  <table>
+    <tr>
+      <td><a href="#"><img class="q"  src="facebook.png"></a></td>
+      <td><a href="#"><img class="q"  src="instea.jpg" ></a></td>
+      <td><a href="#"><img class="q"  src="tw.png" ></a></td>
+      <td><a href="#"><img class="q"  src="in.png" ></a></td>
+      <td><a href="#"><img class="q"  src="google.png" ></a></td>
+    </tr>
+  </table>
+  <table class="tt">
+  	    <tr>
+    	<td><a href="TicketBooking9.html"><button>Book Now</button></a></td>
+
+        </tr>
+        <table class="tt">
+        <tr>
+      <td><a href="home.html"><button>Home</button></a></td>
+      
+        </tr>
+        <img src="download.png ">
+    </table>
+</div>
+</ul>
+</div>
+</div>
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html> 

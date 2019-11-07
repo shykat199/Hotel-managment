@@ -1,0 +1,102 @@
+<style type="text/css">
+	body{
+	font-family: Helvetica;
+	background-color: white;
+	height: 200px;
+	background: url('back.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#payment{
+	color: white;
+	border-radius: 3em;
+	border:1px;
+}
+</style>
+<section>
+<form id=payment>
+    <fieldset>
+        <ol>
+            <li>
+                <label for=name>Name</label>
+ 
+                <input id=name name=name type=text placeholder="First and last name" required autofocus />
+            </li>
+            <li>
+                <label for=email>Email</label>
+                <input id=email name=email type=email placeholder="example@domain.com" required />
+            </li>
+            <li>
+                <label for=phone>Phone</label>
+                <input id=phone name=phone type=tel placeholder="Eg. +14445556666" required />
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Delivery address</legend>
+        <ol>
+            <li>
+                <label for=address>Address</label>
+                <textarea id=address name=address rows=5 required>
+                </textarea>
+            </li>
+            <li>
+                <label for=postcode>Post Code</label>
+                <input id=postcode name=postcode type=text required />
+ 
+            </li>
+            <li>
+                <label for=country>Country</label>
+                <input id=country name=country type=text required />
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Card Details</legend>
+        <ol>
+            <li>
+            <fieldset>
+                <legend>Card Type</legend>
+                <ol>
+                    <li>
+                        <input id=visa name=cardtype type=radio />
+                        <label for=visa>ICICI Credit Card</label>
+                    </li>
+                    <li>
+                        <input id=amex name=cardtype type=radio />
+                        <label for=amex>AmEx</label>
+                    </li>
+                    <li>
+                        <input id=mastercard name=cardtype type=radio />
+                        <label for=mastercard>Mastercard</label>
+                    </li>
+                </ol>
+            </fieldset>
+            </li>
+            <li>
+                <label for=cardnumber>Card Number</label>
+                <input id=cardnumber name=cardnumber type=number required />
+            </li>
+            <li>
+                <label for=secure>Security Code</label>
+                <input id=secure name=secure type=number required />
+            </li>
+            <li>
+                <label for=namecard>Name on Card</label>
+                <input id=namecard name=namecard type=text placeholder="Exact namne as on the card" required />
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <a href="home.html"><button onclick="f1000()" type=submit>Buy It!</button></a>
+          <label><a href="home.html"><input type="button" value="Home"/></a></label>
+    </fieldset>
+</form>
+</section>
+<script type="text/javascript">
+	function f1000() {
+		// body...
+		alert("payment recieived and Details will be mailed to you via mail Shortly");
+	}
+</script>
